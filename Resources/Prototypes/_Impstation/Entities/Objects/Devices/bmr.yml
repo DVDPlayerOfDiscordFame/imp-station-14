@@ -1,0 +1,85 @@
+- type: entity
+  name: baseBMR
+  parent: BaseItem
+  id: BMRBase
+  description: keeps the void at bay
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Devices/bmrscience.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visisble: false }
+  - type: Item
+    sprite: _Impstation/Objects/Devices/bmrscience.rsi
+    size: Ginormous
+  - type: Appearance
+  - type: Clothing
+    sprite: _Impstation/Objects/Devices/bmrscience.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Back
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Machines/beep.ogg
+      params:
+        volume: -5
+    soundDeactivate:
+      path: /Audio/Machines/beep.ogg
+      params:
+        volume: -5
+  - type: PowerCellDraw
+    drawRate: 4
+    useRate: 0
+  - type: ToggleCellDraw
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 10
+  - type: ComponentToggler
+    components:
+    - type: PressureProtection
+      highPressureMultiplier: 1
+      lowPressureMultiplier: 1000
+
+- type: entity
+  name: Barometric Regulator
+  parent: BMRBase
+  id: BMRScience
+  description: Projects a magnetic field to protect its user from low-pressure environments.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Devices/bmrscience.rsi
+    layers:
+    - state: base
+    - state: o6
+      map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      shader: unshaded
+    - state: on
+      visible: false
+      map: ["enum.ToggleVisuals.Layer"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visisble: false }
+  - type: Item
+    sprite: _Impstation/Objects/Devices/bmrscience.rsi
+    size: Ginormous
+  - type: Appearance
+  - type: PowerCellVisuals
+  - type: Clothing
+    sprite: _Impstation/Objects/Devices/bmrscience.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Back
+  - type: Battery
+    maxCharge: 1200
+    startingCharge: 1200
