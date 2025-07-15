@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared._RMC14.Projectiles.Penetration;
 using Content.Shared.Body.Systems;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage;
@@ -325,6 +326,7 @@ public record struct ProjectileReflectAttemptEvent(EntityUid ProjUid, Projectile
 
 /// <summary>
 /// Raised when a projectile hits an entity
+/// Handled bool added by RMC14
 /// </summary>
 [ByRefEvent]
-public record struct ProjectileHitEvent(DamageSpecifier Damage, EntityUid Target, EntityUid? Shooter = null);
+public record struct ProjectileHitEvent(DamageSpecifier Damage, EntityUid Target, EntityUid? Shooter = null, bool Handled = false);
