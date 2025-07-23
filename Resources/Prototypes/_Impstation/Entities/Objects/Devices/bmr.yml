@@ -9,10 +9,10 @@
     sprite: _Impstation/Objects/Devices/bmrscience.rsi
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: { visible: true }
-          False: { visisble: false }
+          False: { visible: false }
   - type: Item
     sprite: _Impstation/Objects/Devices/bmrscience.rsi
     size: Ginormous
@@ -61,14 +61,16 @@
       shader: unshaded
     - state: on
       visible: false
-      map: ["enum.ToggleVisuals.Layer"]
+      map: ["enum.ToggleableVisuals.Layer"]
       shader: unshaded
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: { visible: true }
-          False: { visisble: false }
+          False: { visible: false }
+  - type: ToggleableVisuals
+    spriteLayer: on
   - type: Item
     sprite: _Impstation/Objects/Devices/bmrscience.rsi
     size: Ginormous
