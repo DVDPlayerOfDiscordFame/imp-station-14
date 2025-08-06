@@ -319,8 +319,10 @@
     damage:
       types:
         Heat: 0
-    soundHit:
-      collection: WeakHit
+    soundHit: #imp - changed to our sound and added variation instead of collection
+      path: "/Audio/_Impstation/Weapons/Guns/Hits/energyhit.ogg"
+      params:
+        variation: 0.05
     forceSound: true
 
 - type: entity
@@ -1108,8 +1110,10 @@
     damage:
       types:
         Heat: 0
-    soundHit:
-      collection: WeakHit
+    soundHit: #imp - changed to our sound and added variation instead of collection
+      path: "/Audio/_Impstation/Weapons/Guns/Hits/energyhit.ogg"
+      params:
+        variation: 0.05
     forceSound: true
 
 - type: entity
@@ -1162,6 +1166,10 @@
     damage:
       types:
         Heat: 28
+    soundHit: #imp - changed to our sound and added variation instead of collection
+      path: "/Audio/_Impstation/Weapons/Guns/Hits/energyhit.ogg"
+      params:
+        variation: 0.05
 
 - type: entity
   name : disabler bolt
@@ -1183,8 +1191,10 @@
     damage:
       types:
         Heat: 0
-    soundHit:
-      collection: WeakHit
+    soundHit: #imp - changed to our sound and added variation instead of collection
+      path: "/Audio/_Impstation/Weapons/Guns/Hits/energyhit.ogg"
+      params:
+        variation: 0.05
     forceSound: true
 
 - type: entity
@@ -1260,6 +1270,10 @@
     damage:
       types:
         Heat: 13
+    soundHit: #imp - changed to our sound and added variation instead of collection
+      path: "/Audio/_Impstation/Weapons/Guns/Hits/energyhit.ogg"
+      params:
+        variation: 0.05
 
 - type: entity
   name: wide laser barrage
