@@ -98,6 +98,10 @@
   components:
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/Pistols/viper.rsi #imp
+  - type: GunDamageModifier
+    damage:
+      types:
+        Piercing: 5
   - type: ItemSlots
     slots:
       gun_magazine:
