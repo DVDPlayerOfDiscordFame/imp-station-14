@@ -142,6 +142,7 @@
     steps: 5
     zeroVisible: true
   - type: Gun
+    projectileSpeed: 25
     fireRate: 2.5
     selectedMode: SemiAuto
     availableModes:
@@ -199,6 +200,7 @@
     minAngle: -14
     maxAngle: -16
   - type: Gun
+    projectileSpeed: 25
     minAngle: 16
     maxAngle: 36
     angleIncrease: 2
